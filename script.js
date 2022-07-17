@@ -72,7 +72,7 @@ cardElement.innerHTML =
 // Method 2
 const cardElement2 = window.document.getElementById("car-card2");
 
-cardElement2.children[0].src = "http://127.0.0.1:5500/tesla-roadster.jpg";
+cardElement2.children[0].src = "./tesla-roadster.jpg";
 
 cardElement2.children[1].childNodes[1].textContent = "Tesla";
 
