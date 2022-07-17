@@ -1,8 +1,6 @@
 //Fancy Ball
 
-console.dir(window.document.getElementById("fancy-ball"));
 let ballElement = window.document.getElementById("fancy-ball");
-console.dir(ballElement);
 ballElement.style.height = "120px";
 ballElement.style.width = "120px";
 ballElement.style.display = "inline-block";
@@ -11,11 +9,9 @@ ballElement.style.backgroundImage =
 ballElement.style.border = "2px dashed black";
 ballElement.style.borderRadius = "50%";
 
-//List
+//Info List
 
-console.dir(window.document.getElementById("personal-list"));
 let listElement = window.document.getElementById("personal-list");
-console.dir(listElement);
 
 listElement.innerHTML =
   "<ul><strong>My Info:</strong><li>'first name: Maria'</li><li>'last name: Chin'</li><li>'age: 46'</li></ul>";
@@ -27,9 +23,7 @@ listElement.style.padding = "10px";
 
 //Danger Color
 
-console.dir(window.document.getElementById("bg-color"));
 let bgcolorElement = window.document.getElementById("bg-color");
-console.dir(bgcolorElement);
 bgcolorElement.className = "bg-danger h5 pe-5 ps-5 mt-3 mb-5";
 bgcolorElement.style.color = "white";
 
@@ -43,10 +37,11 @@ const carCard = {
   year: 2014,
 };
 
+// Method 1
 const cardElement = window.document.getElementById("car-card");
 cardElement.innerHTML =
   `<div class="card" id="car-card" style="width: 18rem">
-      <img src="./tesla.jfif.crdownload" class="card-img-top" alt="..." />
+      <img src="./tesla-roadster.jpg" class="card-img-top" alt="..." />
       <div class="card-body">
         <h5 class="card-title">Tesla</h5>
       </div>
@@ -73,3 +68,20 @@ cardElement.innerHTML =
         >
       </div>
     </div>`;
+
+// Method 2
+const cardElement2 = window.document.getElementById("car-card2");
+
+cardElement2.children[0].src = "http://127.0.0.1:5500/tesla-roadster.jpg";
+
+cardElement2.children[1].childNodes[1].textContent = "Tesla";
+
+cardElement2.children[2].children[0].textContent = "title: " + carCard.title;
+cardElement2.children[2].children[1].textContent = "price: " + carCard.price;
+cardElement2.children[2].children[2].textContent = "hand: " + carCard.hand;
+cardElement2.children[2].children[3].textContent = "km: " + carCard.km;
+cardElement2.children[2].children[4].textContent = "year: " + carCard.year;
+
+cardElement2.children[3].childNodes[1].href = "https://www.tesla.com/";
+cardElement2.children[3].childNodes[1].target = "_blank";
+cardElement2.children[3].childNodes[1].innerHTML = "Tesla's site";
