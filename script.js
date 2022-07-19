@@ -24,7 +24,7 @@ listElement.style.padding = "10px";
 //Danger Color
 
 let bgcolorElement = window.document.getElementById("bg-color");
-bgcolorElement.className = "bg-danger h5 pe-5 ps-5 mt-3 mb-5";
+bgcolorElement.className = "bg-danger h5 pe-5 ps-5 mt-3 mb-4";
 bgcolorElement.style.color = "white";
 
 //Car Card
